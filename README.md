@@ -39,8 +39,7 @@ spark-streaming-consumer-app-2.3.1.tar.gz
        spark-streaming.jar
 ```
 -   Packages are archived and compressed using tar and gzip and take the
-    name of the associated artefact and version, following [strict
-    versioning](http://legacy.python.org/dev/peps/pep-0386).
+    name of the associated artifact and version.
 -   Packages must have a three part version number, e.g.
     spark-streaming-consumer-app-2.3.1.tar.gz.
 -   The folder inside the package tar must have the same name as the
