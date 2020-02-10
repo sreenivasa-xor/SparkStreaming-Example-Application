@@ -31,11 +31,11 @@ The package structure is as follows:
 ```
 spark-streaming-consumer-app-2.3.1.tar.gz
     spark-streaming-consumer-app-2.3.1
-        sparkStreaming (Component type)
-           examples
-                application.properties
-               log4j.properties
-               properties.json
+       sparkStreaming (Component type)
+          examples
+             application.properties
+             log4j.properties
+             properties.json
        spark-streaming.jar
 ```
 -   Packages are archived and compressed using tar and gzip and take the
