@@ -7,9 +7,9 @@ that can be deployed using the PNDA Deployment Manager. (See the
 platform-deployment-manager project for details.)
 
 The application is a tar file containing binaries and configuration
-files required to perform Spark Kafka stream processing.
+files required to perform stream processing.
 
-This example application reads random generated messages from Kafka
+This example application reads randomly generated messages from Kafka
 topic and display on the console.
 
 **Requirements**
