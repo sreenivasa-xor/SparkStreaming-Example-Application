@@ -28,8 +28,8 @@ Package Structure
 -----------------
 
 The package structure is as follows:
-
-- spark-streaming-consumer-app-2.3.1.tar.gz
+```
+spark-streaming-consumer-app-2.3.1.tar.gz
     spark-streaming-consumer-app-2.3.1
         sparkStreaming (Component type)
            examples
@@ -37,7 +37,7 @@ The package structure is as follows:
                log4j.properties
                properties.json
        spark-streaming.jar
-
+```
 -   Packages are archived and compressed using tar and gzip and take the
     name of the associated artefact and version, following [strict
     versioning](http://legacy.python.org/dev/peps/pep-0386).
