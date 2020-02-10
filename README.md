@@ -41,18 +41,13 @@ spark-streaming-consumer-app-2.3.1.tar.gz
 -   Packages are archived and compressed using tar and gzip and take the
     name of the associated artefact and version, following [strict
     versioning](http://legacy.python.org/dev/peps/pep-0386).
-
 -   Packages must have a three part version number, e.g.
     spark-streaming-consumer-app-2.3.1.tar.gz.
-
 -   The folder inside the package tar must have the same name as the
     archive .
-
 -   The component types are taken from a controlled list.
-
 -   Component names are chosen by the package developer and will be used
     by the Deployment Manager.
-
 -   Each component type has a distinct structure specification.
 
 Build
