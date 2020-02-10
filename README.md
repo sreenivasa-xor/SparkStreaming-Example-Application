@@ -1,6 +1,8 @@
-**Example of Streaming Application**
+Example of Streaming Application
+--------------------------------
 
-**Overview**
+Overview
+--------
 
 The example streaming application shows an example of an application
 that can be deployed using the PNDA Deployment Manager. (See the
@@ -12,7 +14,8 @@ files required to perform stream processing.
 This example application reads randomly generated messages from Kafka
 topic and display on the console.
 
-**Requirements**
+Requirements
+------------
 
 -   [*Maven*](https://maven.apache.org/docs/3.0.5/release-notes.html)
     3.0.5
@@ -52,7 +55,8 @@ spark-streaming-consumer-app-2.3.1.tar.gz
 
 -   Each component type has a distinct structure specification.
 
-**Build**
+Build
+------
 
 Edit the streaming-app/pom.xml file with the correct dependencies. Refer
 to the Cloudera or Hortonworks version matrix to work out what version
@@ -67,7 +71,8 @@ the application binary, and the application package. It will create a
 package file in the app-package/target directory. It will be called
 spark-streaming-consumer-app-2.3.1.tar.gz.
 
-**Files in the package**
+Files in the package
+--------------------
 
 -   **application.properties:** config file used by the Spark Streaming
     Scala application.
@@ -98,7 +103,8 @@ curl "localhost:8888/packages?user.name="\
 \[{"name": "app", "latest\_versions": \[{"version": "2.3.1", "file": "
 spark-streaming-consumer-app-2.3.1.tar.gz"}\]}\]
 
-**Deploying the package and creating an application**
+Deploying the package and creating an application
+-------------------------------------------------
 
 The PNDA console can be used to deploy the application package to a
 cluster and then to create an application instance. The
@@ -121,7 +127,8 @@ package repository.
 
 ![](./media/image4.png)
 
-**Launch Spark Application on K8S**
+Launch Spark Application on K8S
+-------------------------------
 
 Once application created in Application Management then start the
 application which will launch Kubernetes POD on the host cluster.
