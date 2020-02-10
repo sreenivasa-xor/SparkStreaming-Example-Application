@@ -1,0 +1,13 @@
+{
+    "main_class": "com.xoriant.pnda.examples.spark.RandomIPMessageProducer",
+    "main_jar": "spark-streaming.jar",
+	"spark_version":"2.4.2",
+    "log_level":"INFO",
+	"application_name": "spark-streaming",
+    "driver_cores": "1",
+    "driver_memory": "2G",
+    "executor_cores": "1",
+    "executor_instances": "2",
+    "executor_memory": "2G" ,
+    "spark_submit_args": ""
+}
