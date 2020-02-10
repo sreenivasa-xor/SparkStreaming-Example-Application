@@ -116,29 +116,23 @@ When creating an application in the console, ensure that the Kafka topic
 "random\_ip\_topic" is created thru Kafka Manager
 UI(http://kafka-manager.pnda.io).
 
-![](./media/image1.png){width="6.268055555555556in"
-height="2.6659722222222224in"}
+![](./media/image1.png)
 
 To make the package available for deployment it must be uploaded to a
 package repository. The package should be uploaded by manually into PNDA
 package repository.
 
-![](./media/image2.png){width="6.268055555555556in"
-height="1.8215277777777779in"}
+![](./media/image2.png)
 
-![](./media/image3.png){width="6.268055555555556in"
-height="1.4784722222222222in"}
+![](./media/image3.png)
 
-![](./media/image4.png){width="6.268055555555556in"
-height="2.303472222222222in"}
+![](./media/image4.png)
 
 **Launch Spark Application on K8S**
 
 Once application created in Application Management then start the
 application which will launch Kubernetes POD on the host cluster.
 
-![](./media/image5.png){width="6.268055555555556in"
-height="2.3722222222222222in"}
+![](./media/image5.png)
 
-![](./media/image6.png){width="6.268055555555556in"
-height="0.5763888888888888in"}
+![](./media/image6.png)
