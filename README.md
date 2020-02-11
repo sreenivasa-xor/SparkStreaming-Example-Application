@@ -9,7 +9,7 @@ that can be deployed using the PNDA Deployment Manager. (See the
 platform-deployment-manager project for details.)
 
 The application is a tar file containing binaries and configuration
-files required to perform stream processing.
+files for Spark-streaming application which consumes and processes messages from Kafka topic.
 
 This example application reads randomly generated messages from Kafka
 topic and display on the console.
@@ -58,7 +58,7 @@ this should be.
 
 To build the example applications use:
 
-mvn clean package
+root_of_the_repository/mvn clean package
 
 This command should be run at the root of the repository and will build
 the application binary, and the application package. It will create a
@@ -68,13 +68,13 @@ spark-streaming-consumer-app-2.3.1.tar.gz.
 Files in the package
 --------------------
 
--   **application.properties:** config file used by the Spark Streaming
+-   **sparkStreaming/examples/application.properties:** config file used by the Spark Streaming
     Scala application.
 
--   **log4j.properties:** defines the log level and behaviour for the
+-   **sparkStreaming/examples/log4j.properties:** defines the log level and behaviour for the
     application.
 
--   **properties.json:** contains default properties that may be
+-   **sparkStreaming/examples/properties.json:** contains default properties that may be
     overridden at application creation time.
 
 Upload Package into Package Repository
@@ -125,7 +125,7 @@ Launch Spark Application on K8S
 -------------------------------
 
 Once application created in Application Management then start the
-application which will launch Kubernetes POD on the host cluster.
+application which will launch Kubernetes Pod on the host cluster.
 
 ![](./media/image5.png)
 
