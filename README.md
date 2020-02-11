@@ -142,7 +142,7 @@ Logs can be checked by 2 ways
  ```
 2) By host cluster view logs from perticuler pod 
 
-See [Consumer Container logs](./logs/consumer_container.log)
+- See [here](./logs/consumer_container.log) for Consumer container logs
 
-See [Producer container logs](./logs/producer_container.log)
+- See [here](./logs/producer_container.log) for Producer container logs
 
