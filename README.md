@@ -140,9 +140,9 @@ Logs can be checked by 2 ways
  kubectl -n namespace get logs "spark-streaming-consumer-driver"
  kubectl -n namespace get logs "spark-streaming-producer-driver"
  ```
-2) By 
+2) By host cluster view logs from perticuler pod 
 
-![](./media/image7.png)
+See [Consumer Container logs](./logs/consumer_container.log)
 
-![](./media/image8.png)
+See [Producer container logs](./logs/producer_container.log)
 
