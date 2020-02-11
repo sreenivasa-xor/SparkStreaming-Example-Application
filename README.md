@@ -57,8 +57,9 @@ to the Cloudera or Hortonworks version matrix to work out what version
 this should be.
 
 To build the example applications use:
-
+```
 root_of_the_repository/mvn clean package
+```
 
 This command should be run at the root of the repository and will build
 the application binary, and the application package. It will create a
@@ -130,3 +131,18 @@ application which will launch Kubernetes Pod on the host cluster.
 ![](./media/image5.png)
 
 ![](./media/image6.png)
+
+Check Spark Application logs on K8S
+-----------------------------------
+Logs can be checked by 2 ways
+1) By using kubectl command
+ ```
+ kubectl -n namespace get logs "spark-streaming-consumer-driver"
+ kubectl -n namespace get logs "spark-streaming-producer-driver"
+ ```
+2) By 
+
+![](./media/image7.png)
+
+![](./media/image8.png)
+
