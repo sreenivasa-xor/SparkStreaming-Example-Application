@@ -1,0 +1,202 @@
+﻿++ id -u 
++ myuid=0 
+++ id -g 
++ mygid=0 
++ set +e 
+++ getent passwd 0 
++ uidentry=root:x:0:0:root:/root:/bin/ash 
++ set -e 
++ '[' -z root:x:0:0:root:/root:/bin/ash ']' 
++ SPARK_K8S_CMD=driver 
++ case "$SPARK_K8S_CMD" in 
++ shift 1 
++ SPARK_CLASSPATH=':/opt/spark/jars/*' 
++ env 
++ grep SPARK_JAVA_OPT_ 
++ sort -t_ -k4 -n 
++ sed 's/[^=]*=\(.*\)/\1/g' 
++ readarray -t SPARK_EXECUTOR_JAVA_OPTS 
++ '[' -n '' ']' 
++ '[' -n '' ']' 
++ PYSPARK_ARGS= 
++ '[' -n '' ']' 
++ R_ARGS= 
++ '[' -n '' ']' 
++ '[' '' == 2 ']' 
++ '[' '' == 3 ']' 
++ case "$SPARK_K8S_CMD" in 
++ CMD=("$SPARK_HOME/bin/spark-submit" --conf "spark.driver.bindAddress=$SPARK_DRIVER_BIND_ADDRESS" --deploy-mode client "$@") 
++ exec /sbin/tini -s -- /opt/spark/bin/spark-submit --conf spark.driver.bindAddress=10.42.2.238 --deploy-mode client --properties-file /opt/spark/conf/spark.properties --class com.cisco.pnda.examples.spark.MessageConsumer spark-internal 
+20/02/11 05:31:27 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable 
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties 
+20/02/11 05:31:38 INFO SparkContext: Running Spark version 2.4.4 
+20/02/11 05:31:39 INFO SparkContext: Submitted application: Get Streaming Data 
+20/02/11 05:31:42 INFO SecurityManager: Changing view acls to: root 
+20/02/11 05:31:42 INFO SecurityManager: Changing modify acls to: root 
+20/02/11 05:31:42 INFO SecurityManager: Changing view acls groups to: 
+20/02/11 05:31:42 INFO SecurityManager: Changing modify acls groups to: 
+20/02/11 05:31:42 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set() 
+20/02/11 05:31:57 INFO Utils: Successfully started service 'sparkDriver' on port 7078. 
+20/02/11 05:31:59 INFO SparkEnv: Registering MapOutputTracker 
+20/02/11 05:32:00 INFO SparkEnv: Registering BlockManagerMaster 
+20/02/11 05:32:00 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information 
+20/02/11 05:32:01 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up 
+20/02/11 05:32:02 INFO DiskBlockManager: Created local directory at /var/data/spark-72221a1f-76b5-414b-a7b9-7ea4f933f955/blockmgr-132630fa-e20a-4fc0-a667-d95628c3dca0 
+20/02/11 05:32:03 INFO MemoryStore: MemoryStore started with capacity 912.3 MB 
+20/02/11 05:32:04 INFO SparkEnv: Registering OutputCommitCoordinator 
+20/02/11 05:32:13 INFO Utils: Successfully started service 'SparkUI' on port 4040. 
+20/02/11 05:32:14 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://spark-streaming-consumer-1581398946809-driver-svc.pnda.svc:4040 
+20/02/11 05:32:14 INFO SparkContext: Added JAR file:///data/stage/0102a97a-1059-40c5-94b5-094887aa14c9/spark-streaming-consumer-app-2.3.1/spark-streaming.jar at spark://spark-streaming-consumer-1581398946809-driver-svc.pnda.svc:7078/jars/spark-streaming.jar with timestamp 1581399134318 
+20/02/11 05:32:15 INFO Executor: Starting executor ID driver on host localhost 
+20/02/11 05:32:16 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 7079. 
+20/02/11 05:32:16 INFO NettyBlockTransferService: Server created on spark-streaming-consumer-1581398946809-driver-svc.pnda.svc:7079 
+20/02/11 05:32:16 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy 
+20/02/11 05:32:18 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, spark-streaming-consumer-1581398946809-driver-svc.pnda.svc, 7079, None) 
+20/02/11 05:32:18 INFO BlockManagerMasterEndpoint: Registering block manager spark-streaming-consumer-1581398946809-driver-svc.pnda.svc:7079 with 912.3 MB RAM, BlockManagerId(driver, spark-streaming-consumer-1581398946809-driver-svc.pnda.svc, 7079, None) 
+20/02/11 05:32:18 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, spark-streaming-consumer-1581398946809-driver-svc.pnda.svc, 7079, None) 
+20/02/11 05:32:18 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, spark-streaming-consumer-1581398946809-driver-svc.pnda.svc, 7079, None) 
+------------------------------------------- 
+Batch: 0 
+------------------------------------------- 
++-------------+--------------------+ 
+|          key|               value| 
++-------------+--------------------+ 
+| 192.168.2.97|1580798940345,0,w...| 
+| 192.168.2.28|1580798940515,5,w...| 
+| 192.168.2.33|1580798940515,6,w...| 
+| 192.168.2.90|1580798940516,9,w...| 
+| 192.168.2.99|1580798940516,11,...| 
+| 192.168.2.90|1580798940517,12,...| 
+| 192.168.2.33|1580798940518,20,...| 
+|192.168.2.142|1580798940520,27,...| 
+| 192.168.2.94|1580798940520,34,...| 
+|192.168.2.170|1580798940520,36,...| 
+|192.168.2.132|1580798940520,37,...| 
+|  192.168.2.7|1580798940521,39,...| 
+|192.168.2.248|1580798940521,45,...| 
+| 192.168.2.27|1580798940521,47,...| 
+|192.168.2.242|1580798940521,48,...| 
+|192.168.2.242|1580798940521,49,...| 
+| 192.168.2.61|1580798940521,53,...| 
+| 192.168.2.99|1580798940521,55,...| 
+|192.168.2.197|1580798940522,57,...| 
+|192.168.2.102|1580798940522,58,...| 
++-------------+--------------------+ 
+only showing top 20 rows 
+ 
+------------------------------------------- 
+Batch: 1 
+------------------------------------------- 
++-------------+--------------------+ 
+|          key|               value| 
++-------------+--------------------+ 
+|192.168.2.242|1580798940657,604...| 
+| 192.168.2.49|1580798940657,604...| 
+| 192.168.2.46|1580798940657,604...| 
+| 192.168.2.83|1580798940657,604...| 
+|192.168.2.226|1580798940657,604...| 
+|192.168.2.191|1580798940657,604...| 
+| 192.168.2.88|1580798940657,605...| 
+| 192.168.2.66|1580798940657,606...| 
+| 192.168.2.10|1580798940657,607...| 
+|192.168.2.248|1580798940657,607...| 
+|192.168.2.121|1580798940657,608...| 
+|192.168.2.191|1580798940658,608...| 
+|192.168.2.153|1580798940658,609...| 
+| 192.168.2.47|1580798940658,610...| 
+|192.168.2.170|1580798940658,610...| 
+|192.168.2.116|1580798940658,611...| 
+|192.168.2.242|1580798940658,611...| 
+|192.168.2.122|1580798940658,611...| 
+|  192.168.2.2|1580798940658,611...| 
+|192.168.2.116|1580798940658,612...| 
++-------------+--------------------+ 
+only showing top 20 rows 
+ 
+------------------------------------------- 
+Batch: 2 
+------------------------------------------- 
++-------------+--------------------+ 
+|          key|               value| 
++-------------+--------------------+ 
+| 192.168.2.93|1580798940762,120...| 
+|  192.168.2.6|1580798940762,120...| 
+|192.168.2.243|1580798940762,120...| 
+|192.168.2.136|1580798940762,120...| 
+|192.168.2.209|1580798940762,120...| 
+| 192.168.2.97|1580798940763,120...| 
+| 192.168.2.10|1580798940763,120...| 
+|192.168.2.213|1580798940763,120...| 
+|192.168.2.123|1580798940763,121...| 
+|192.168.2.226|1580798940763,121...| 
+|192.168.2.160|1580798940763,121...| 
+|192.168.2.132|1580798940763,121...| 
+|192.168.2.139|1580798940763,121...| 
+| 192.168.2.93|1580798940763,121...| 
+|192.168.2.209|1580798940763,121...| 
+|192.168.2.209|1580798940763,121...| 
+| 192.168.2.99|1580798940763,121...| 
+|192.168.2.209|1580798940763,121...| 
+| 192.168.2.47|1580798940763,121...| 
+| 192.168.2.97|1580798940763,121...| 
++-------------+--------------------+ 
+only showing top 20 rows 
+ 
+------------------------------------------- 
+Batch: 3 
+------------------------------------------- 
++-------------+--------------------+ 
+|          key|               value| 
++-------------+--------------------+ 
+|192.168.2.123|1580798940869,180...| 
+|192.168.2.209|1580798940869,180...| 
+| 192.168.2.75|1580798940869,180...| 
+|192.168.2.150|1580798940869,180...| 
+| 192.168.2.88|1580798940869,180...| 
+|192.168.2.120|1580798940869,180...| 
+|192.168.2.191|1580798940869,180...| 
+|192.168.2.252|1580798940869,181...| 
+| 192.168.2.47|1580798940869,181...| 
+|192.168.2.249|1580798940869,181...| 
+| 192.168.2.97|1580798940869,181...| 
+|192.168.2.208|1580798940869,181...| 
+|192.168.2.125|1580798940869,181...| 
+|192.168.2.226|1580798940869,181...| 
+|192.168.2.116|1580798940869,181...| 
+| 192.168.2.61|1580798940870,181...| 
+|192.168.2.209|1580798940870,181...| 
+|192.168.2.170|1580798940870,181...| 
+| 192.168.2.66|1580798940870,181...| 
+|  192.168.2.6|1580798940870,181...| 
++-------------+--------------------+ 
+only showing top 20 rows 
+ 
+------------------------------------------- 
+Batch: 4 
+------------------------------------------- 
++-------------+--------------------+ 
+|          key|               value| 
++-------------+--------------------+ 
+|192.168.2.122|1580798940946,239...| 
+| 192.168.2.55|1580798940946,240...| 
+|192.168.2.125|1580798940946,240...| 
+| 192.168.2.65|1580798940946,240...| 
+|192.168.2.164|1580798940946,240...| 
+| 192.168.2.88|1580798940946,240...| 
+|192.168.2.191|1580798940946,240...| 
+| 192.168.2.49|1580798940946,240...| 
+| 192.168.2.78|1580798940946,240...| 
+| 192.168.2.49|1580798940946,240...| 
+|192.168.2.136|1580798940946,240...| 
+| 192.168.2.10|1580798940946,240...| 
+|192.168.2.172|1580798940946,240...| 
+| 192.168.2.93|1580798940946,240...| 
+|192.168.2.122|1580798940946,240...| 
+|  192.168.2.2|1580798940946,240...| 
+|192.168.2.142|1580798940946,240...| 
+| 192.168.2.97|1580798940946,240...| 
+| 192.168.2.97|1580798940946,240...| 
+| 192.168.2.90|1580798940946,240...| 
++-------------+--------------------+ 
+only showing top 20 rows 
+ 
