@@ -14,7 +14,7 @@
 		<scala.tools.version>2.11</scala.tools.version>
 		<scala.version>2.11.11</scala.version>
 		<spark.version>2.4.0</spark.version>
-		<kafka.version>1.1.0</kafka.version>
+		<kafka.version>3.9.2</kafka.version>
 	</properties>
 
 	<repositories>
